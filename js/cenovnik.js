@@ -42,28 +42,7 @@ $(document).ready(function() {
         $('.slide-show > img:gt(0)').css("position", "relative");
         $('.banner').css("margin-top", "1px");
     }
-    if (title === "Usluge") {
-        $(".navbar").css("background-image", "linear-gradient(60deg, rgba(255, 255, 255, 0.7) 15%, rgba(240, 240, 240, 0.7), rgba(211, 211, 211, 0.6) 85%)");
-        $("footer").css("background-image", "linear-gradient(60deg, rgba(255, 255, 255, 0.7) 15%, rgba(240, 240, 240, 0.7), rgba(211, 211, 211, 0.6) 85%)");
-        $(".content-contact").css("background-image", "linear-gradient(60deg, rgba(255, 255, 255, 0.7) 15%, rgba(240, 240, 240, 0.7), rgba(211, 211, 211, 0.6) 85%)");
-        $(".dropdown-menu").css("background-image", "linear-gradient(60deg, rgba(255, 255, 255, 0.7) 15%, rgba(240, 240, 240, 0.7), rgba(211, 211, 211, 0.6) 85%)");
 
-        colorLi();
-    }
-    if (title === "Desktop servis") {
-        $(".navbar").css("background-image", "linear-gradient(60deg, rgba(248, 238, 236, 0.7) 15%, rgba(245, 213, 205, 0.7), rgba(250, 237, 233, 0.6) 85%)");
-        $("footer").css("background-image", "linear-gradient(60deg, rgba(248, 238, 236, 0.7) 15%, rgba(245, 213, 205, 0.7), rgba(250, 237, 233, 0.6) 85%)");
-        $(".content-contact").css("background-image", "linear-gradient(60deg, rgba(248, 238, 236, 0.7) 15%, rgba(245, 213, 205, 0.7), rgba(250, 237, 233, 0.6) 85%)");
-        $(".dropdown-menu").css("background-image", "linear-gradient(60deg, rgba(248, 238, 236, 0.7) 15%, rgba(245, 213, 205, 0.7), rgba(250, 237, 233, 0.6) 85%)");
-        colorLi();
-    }
-    if (title === "Laptop servis") {
-        $(".navbar").css("background-image", "linear-gradient(60deg, rgba(244, 236, 248, 0.7) 15%, rgba(244, 205, 245, 0.7), rgba(244, 233, 250, 0.6) 85%)");
-        $("footer").css("background-image", "linear-gradient(60deg, rgba(244, 236, 248, 0.7) 15%, rgba(244, 205, 245, 0.7), rgba(244, 233, 250, 0.6) 85%)");
-        $(".content-contact").css("background-image", "linear-gradient(60deg, rgba(244, 236, 248, 0.7) 15%, rgba(244, 205, 245, 0.7), rgba(244, 233, 250, 0.6) 85%)");
-        $(".dropdown-menu").css("background-image", "linear-gradient(60deg, rgba(244, 236, 248, 0.7) 15%, rgba(244, 205, 245, 0.7), rgba(244, 233, 250, 0.6) 85%)");
-        colorLi();
-    }
     if (title === "Cenovnik") {
         $(".navbar").css("background-image", "linear-gradient(60deg, rgba(248, 247, 236, 0.7) 15%, rgba(244, 245, 205, 0.7), rgba(249, 250, 233, 0.6) 85%)");
         $("footer").css("background-image", "linear-gradient(60deg, rgba(248, 247, 236, 0.7) 15%, rgba(244, 245, 205, 0.7), rgba(249, 250, 233, 0.6) 85%)");
@@ -111,11 +90,6 @@ $(document).ready(function() {
                     $('li.dropdown a').attr("href", "services.html");
                 }
             });
-            $('#bs-example-navbar-collapse-1 ul li').click(function() {
-                $('#bs-example-navbar-collapse-1').attr("aria-expanded", "false");
-                $('#bs-example-navbar-collapse-1').toggleClass('in');
-                console.log('uso');
-            });
         } else if ($(window).width() <= 1200) {
             // $('#bs-example-navbar-collapse-1 ul').removeClass("navbar-right");
             $('#bs-example-navbar-collapse-1 ul').css("font-size", ("20px"));
@@ -151,6 +125,7 @@ $(document).ready(function() {
 
     var date = new Date();
     var year = date.getFullYear();
+    console.log(year);
     document.getElementById('prava').innerHTML = "Copyright &copy; RDdesign " + year + ". All Rights Reserved";
 
     window.onscroll = function() {
@@ -158,24 +133,13 @@ $(document).ready(function() {
     };
 
     var windowHeight = (window.innerHeight * 5) / 10;
-    var about = document.getElementById("one");
     var contact = document.getElementById("contact");
 
     function myFunction() {
-        // var positionA = about.getBoundingClientRect().top;
+
         var positionC = contact.getBoundingClientRect().top;
-        if (title !== "Cenovnik" && document.documentElement.scrollTop >= windowHeight) {
-            about.getElementsByClassName("col-lg-5")[0].classList.add("animaimg");
-            about.getElementsByClassName("col-lg-5")[1].classList.add("animaright");
-        }
-        if (title !== "Cenovnik" && windowHeight >= positionC) {
-            contact.getElementsByClassName("container")[0].classList.add("animaimg");
-            document.getElementById("partner").classList.add("animarightdelay");
-            var banner = document.getElementsByClassName("banner");
-            banner[0].getElementsByClassName("col-md-6")[0].classList.add("animaleftdelay");
-            banner[0].getElementsByClassName("col-md-6")[1].classList.add("animaleftdelay");
-        }
-        if (title === "Cenovnik" && windowHeight >= positionC) {
+
+        if (windowHeight >= positionC) {
             contact.getElementsByClassName("container")[0].classList.add("animaimg");
             document.getElementById("partner").classList.add("animarightdelay");
             var banner = document.getElementsByClassName("banner");
@@ -183,14 +147,13 @@ $(document).ready(function() {
             banner[0].getElementsByClassName("col-md-6")[1].classList.add("animaleftdelay");
             // contact.getElementsByClassName("col")[1].classList.add("animaright");
         }
+        // console.log(positionS);
     }
     //za radno vreme
     var newDate = new Date();
     var hours = new Date().getHours();
     var day = new Date().getDay();
-    $("#r-vreme-footer").html('pon-pet 13 - 21h<br>subotom 10 - 15h');
-    $(".radnovreme").html('Radno vreme<br> pon-pet 13 - 21h<br>subotom 10 - 15h');
-    if ((hours >= 13 && hours <= 21 && day <= 5) || (day == 6 && hours >= 10 && hours <= 15)) {
+    if ((hours >= 13 && hours <= 21 && day <= 5) || (day = 6 && hours >= 10 && hours <= 15)) {
         $("#r-vreme").html('otvoreno');
     } else {
         $("#r-vreme").html('zatvoreno');
