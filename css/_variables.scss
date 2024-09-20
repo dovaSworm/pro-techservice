@@ -1,0 +1,107 @@
+$crna: rgba(11, 12, 16, 1);
+$crvena: #ff0047;
+$svetlosiva: rgba(197, 198, 200, 1);
+$siva: rgba(32, 40, 51, 1);
+$plava: #275ea3;
+$plavashadow: #49add1;
+$svetloplava: rgb(188, 230, 244);
+// $mainback:#09052b;
+// $backzakartice: #09052bcf;
+$ljuba: rgb(83, 15, 234);
+$darkback: rgba(9, 5, 43, 0.7417647059);
+$lightback:rgba(236, 243, 251, 0.9490196078);
+$box-shadow-main: rgb(9 5 43 / 61%) 0px 2px 4px, rgb(9 5 43 / 66%) 0px 7px 12px -3px, rgb(9 5 43 / 59%) 0px -3px 0px inset;
+$box-shadow-active: rgb(9 5 43 / 61%) 0px 0px 2px, rgb(9 5 43 / 14%) 0px 3px 9px -3px, rgb(9 5 43 / 43%) 0px -2px 0px inset;
+$mainback: repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.09), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.03), transparent 3px), linear-gradient(45deg, rgba(46, 127, 240, 0.73), rgba(103, 228, 243, 0.86)), url(../img/12.jpg);
+$tinyscreen: rgb(9 5 43 / 61%) 0px 2px 4px, rgb(9 5 43 / 50%) 0px 7px 13px -3px, rgb(9 5 43 / 42%) 0px -3px 0px inset, rgb(9 5 43 / 71%) -3px 12px 33px 4px;
+$largescreen: rgb(74 104 219 / 54%) 0px 11px 36px -20px, rgb(74 111 219 / 71%) 0px 16px 30px -30px, rgb(74 151 219 / 88%) 0px -2px 6px 0px inset;
+$recomcardshadow: rgba(3, 102, 214, 0.3) 0px 0px 0px 2px!important;
+
+@font-face {
+    font-family: "Neutrons";
+    src: url(../fonts/NeutronsDemoRegular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Orbitron";
+    src: url(../fonts/Orbitron-ExtraBold.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Play";
+    src: url(../fonts/Play-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Playb";
+    src: url(../fonts/Play-Bold.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Roboto";
+    src: url(../fonts/Roboto-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Alegrya";
+    src: url(../fonts/AlegreyaSansSC-Thin.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Coda";
+    src: url(../fonts/CodaCaption-ExtraBold.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Archivo";
+    src: url(../fonts/ArchivoBlack-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Cormoran";
+    src: url(../fonts/CormorantGaramond-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "DotGot";
+    src: url(../fonts/DotGothic16-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Electro";
+    src: url(../fonts/Electrolize-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Fredo";
+    src: url(../fonts/FredokaOne-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Goldman";
+    src: url(../fonts/Goldman-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Grupo";
+    src: url(../fonts/Gruppo-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Julius";
+    src: url(../fonts/JuliusSansOne-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Marvel";
+    src: url(../fonts/Marvel-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "OpenSans";
+    src: url(../fonts/OpenSans-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Quastrial";
+    src: url(../fonts/Questrial-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "Raleway";
+    src: url(../fonts/Raleway-Regular.ttf) format("truetype");
+  }
+  @font-face {
+    font-family: "SixCaps";
+    src: url(../fonts/SixCaps-Regular.ttf) format("truetype");
+  }
+// .parent {
+//     height: 100%;
+//     display: grid;
+//     grid-template-columns: repeat(3, 1fr);
+//     grid-template-rows: repeat(2, 1fr);
+//     grid-column-gap: 0px;
+//     grid-row-gap: 0px;
+// }

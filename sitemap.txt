@@ -1,6 +1,0 @@
-http://protech-servis.rs/index.php
-http://protech-servis.rs/index.php#about
-http://protech-servis.rs/cenovnik.php
-http://protech-servis.rs/services.php
-http://protech-servis.rs/desktop.php
-http://protech-servis.rs/laptop.php

@@ -1,114 +1,61 @@
-<a href="#"></a>
-    <div id="contact" class="content-contact">
+<footer id="contact">
 
-        <div class="container">
+    <div class="info container backlight">
 
-            <div class="row">
-                <div class="col-md-6 col-lg-3 text-center">
-                    <h3 class="section-heading">Adresa&nbsp;<i class="fa fa-address-card-o fa-lg" aria-hidden="true"></i></h3>
-                    <address>Vojvode Stepe 133 <br />11000 Beograd</address>
-                </div>
-                <div class="col-md-6 col-lg-6 text-center">
-                    <h3 class="section-heading">Mail&nbsp;<i class="fa fa-envelope-o fa-lg" aria-hidden="true"></i></h3>
-                    <div class="clearfix"></div>
-                    <span><a href="mailto:protechnology.servis@gmail.com">protechnology.servis@gmail.com</a></span>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center">
-                    <h3 class="section-heading">Telefoni&nbsp;<i class="fa fa-phone fa-lg" aria-hidden="true"></i></h3>
-                    <div class="clearfix"></div>
-                    <a href="tel:+38163/810-1242">063/810-1242</a>
-                </div>
-                <div class="col-md-6 col-lg-3 text-center">
-                    <h3 class="section-heading">Radno vreme&nbsp;<i class="fa fa-clock fa-lg" aria-hidden="true"></i></h3>
-                    <p id="r-vreme-footer"></p>
-                </div>
-            </div>
-            <div class="row">
-                <div id="partner" class="col-lg-12">Naš partner na N. Beogradu (pored Arene)
+        <h2 class="foot-h">Kako do nas?</h2>
+        <div class="row g-0 con-card">
+        <div id="partner" class="row g-0"><span>Naš partner na N. Beogradu (pored Arene)</span>
                     <a href="http://www.laptopklinika.rs/"> <img src="img/logoklinika.png" alt="laptopklinika"> LAPTOP KLINIKA </a>
                 </div>
+            <div class="col-12 col-md-4 justify-content-start">
+                <div class="con-item">
+                    <h6>Adresa&nbsp;<i class="far fa-address-card"></i></h6>
+                    <address>Vojvode Stepe 133, 11000 Beograd</address>
+
+                </div>
+                <div class="con-item">
+                    <h6 class="">Radno vreme&nbsp;<i class="far fa-clock"></i></h6>
+                    <p class="radnovreme"></p>
+                    <p class="">Nedeljom ne radimo</p>
+                </div>
+                <div class="con-item mail">
+                    <h6 class="">Mail&nbsp;<i class="far fa-envelope"></i></h6>
+                    <a href="mailto:protechnology.servis@gmail.com">protechnology.servis@gmail.com</a>
+                </div>
+                <div class="con-item">
+                    <h6>Telefoni&nbsp;<i class="fas fa-mobile-alt"></i></h6>
+                    <a class="" href="tel:+38163/8101-242">+381 63 8101 242</a>
+                    <a class="" href="tel:+381 67 7811 242">+381 67 7811 242</a>
+                </div>
+                <div class="facelink">
+                    <a href="https://www.facebook.com/protechnology.servis.3"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://www.linkedin.com/in/pro-technology-servis-a751b617b/"><i class="fab fa-linkedin-in"></i></a>
+                </div>
             </div>
-            <div class="row">
-                <div class="col-md-7 col-lg-7">
+            <div class="col-12 col-md-8 justify-content-start">
+                
+                <div id="mapa">
                     <iframe src="https://maps.google.com/maps?q=vojvode%20stepe%20133%20BEograd&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen></iframe>
                 </div>
-                <div class="col-md-5 col-lg-5">
-                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-
-                        <!-- Wrapper for slides -->
-                        <div class="carousel-inner" role="listbox">
-                            <div class="item active">
-                                <img src="img/izlog2.jpg" alt="pro-tech servis">
-                                <div class="carousel-caption">
-                                    ...
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src="img/sajt.jpg" alt="pro-tech servis">
-                                <div class="carousel-caption">
-                                    ...
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src="img/sajt6.jpg" alt="pro-tech servis">
-                                <div class="carousel-caption">
-                                    ...
-                                </div>
-                            </div>
-                            <div class="item">
-                                <img src="img/sajt1.jpg" alt="pro-tech servis">
-                                <div class="carousel-caption">
-                                    ...
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
-        <!-- /.container -->
-
     </div>
-
-    <div class="banner">
-
-        <div class="container">
-
-            <div class="row">
-                <div class="col-md-6 text-center">
-                    <h2>Pratite nas putem društvenih mreža:</h2>
-                </div>
-                <div class="col-md-6 text-center">
-                    <a href="https://www.facebook.com/protechnology.servis.3" class="btn btn-default btn-lg"><i class="fa fa-facebook fa-fw"></i> <span class="network-name">Facebook</span></a>
-                    <a href="https://www.linkedin.com/in/pro-technology-servis-a751b617b/" class="btn btn-default btn-lg"><i class="fa fa-linkedin fa-fw"></i> <span class="network-name">Linkedin</span></a>
-                </div>
-            </div>
+    <div class="dev-brend w-100">
+        <div class="m-auto">
+            <a href="http://www.doveden.com"><img src="img/dova.png" alt="rddesign"></a>
         </div>
-        <!-- /.container -->
-
+        <p id="prava"></p>
     </div>
-    <!-- /.banner -->
-    <a href="#" data-toggle="tooltip" data-placement="top" title="Idi na vrh" class="primarni"><img src="img/arrowup32.png" alt="servis racunara i laptopova Pro-technology"></a>
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="text-center d-block">
-                        <img src="img/rddesign-schwarz.png" alt="rddesign">
-                        <p id="prava" class="copyright text-muted"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="js/jquery.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/main.js"></script>
-
-
+</footer>
+<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+</script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+</script> -->
+<script src="js/jquery.js"></script>
+<script src="js/main.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
