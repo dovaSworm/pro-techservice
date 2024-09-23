@@ -55,8 +55,20 @@ body {
         outline: none !important;
     }
 }
-
+.show {
+    // transition: 1.3s ease-in-out;
+    transform: translate(0) !important;
+    -moz-transform: translate(0) !important;
+    -webkit-transform: translate(0) !important;
+}
+.hide {
+    transform: translate(0, -50px) !important;
+}
 .navbar {
+    transition: 0.9s ease;
+    transform: translate(0, -100%);
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px;
     .navbar-nav {
         font-size: smaller;
         font-family: "Play";
@@ -86,8 +98,6 @@ body {
     .navbar-collapse {
         flex-grow: 0;
     }
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.45) 0 5px 9px 0px;
     .nav-holder {
         padding: 0;
         height: 100%;
@@ -188,15 +198,15 @@ body {
         }
     }
 }
-
 .hero-h {
     height: 80vh;
     width: 100%;
+    position: relative;
     // @include medium-device {
     //     height: 70vh;
     // }
     @include small-device {
-        height: 65vh;
+        height: 70vh;
     }
     .back-h {
         display: grid;
@@ -221,18 +231,12 @@ body {
     }
     .title-h {
         position: absolute;
-        width: 100%;
+        display: flex;
         top: 0;
         left: 0;
         color: white;
-        height: 80vh;
+        height: 100%;
         width: 100%;
-        // @include medium-device {
-        //     height: 70vh;
-        // }
-        @include small-device {
-            height: 70vh;
-        }
         h1 {
             span {
                 display: block;
@@ -244,7 +248,7 @@ body {
                 }
             }
             font-family: "Playb";
-            margin-top: 35vh;
+            margin: auto;
             text-align: center;
             font-size: 2rem;
             text-shadow: 0px 0px 22px #9f9f9f82;
@@ -254,7 +258,6 @@ body {
         }
     }
 }
-
 #about {
     @include small-device {
         padding: 20px 0;
@@ -535,7 +538,6 @@ body {
         }
     }
 }
-
 #prices {
     .table-h {
         padding: 0;
@@ -592,7 +594,6 @@ body {
         }
     }
 }
-
 footer {
     background-image: url(../img/kontakt2.jpg);
     background-size: cover !important;
@@ -635,23 +636,23 @@ footer {
             }
         }
     }
-
     #prava {
         text-align: center;
         font-size: 12px;
         margin-bottom: 0;
     }
-
     .dev-brend {
         background-color: white;
         padding: 10px 0;
         width: 100%;
+        box-shadow:
+            rgba(0, 0, 0, 0.4) 0px -1px 7px 0px,
+            rgba(0, 0, 0, 0.3) 0px 7px 18px -1px;
         a {
             width: fit-content;
             margin: auto;
             display: block;
         }
-        box-shadow: 0px 0px 21px -3px #00000057;
         img {
             width: 150px;
         }
