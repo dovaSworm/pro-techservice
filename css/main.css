@@ -35,7 +35,6 @@ h2 {
   width: -moz-fit-content;
   width: fit-content;
   margin: auto;
-  padding: 10px;
   margin-bottom: 100px;
   font-size: 3rem;
   text-transform: uppercase;
@@ -87,16 +86,9 @@ a:focus {
 
 .navbar {
   background-color: white;
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-  display: none;
-}
-@media (min-width: 992px) {
-  .navbar {
-    height: 6vh;
-  }
+  box-shadow: rgba(0, 0, 0, 0.45) 0 5px 9px 0px;
 }
 .navbar .nav-holder {
-  padding: 0 3px;
   height: 100%;
 }
 @media (max-width: 992px) {
@@ -111,10 +103,15 @@ a:focus {
     text-align: center;
   }
 }
-.navbar .navbar-brand {
+.navbar .logo {
+  display: flex;
+  align-items: center;
+}
+.navbar .logo a {
+  padding: 0;
   margin: 0;
 }
-.navbar .navbar-brand img {
+.navbar .logo a img {
   height: 40px;
 }
 @media (min-width: 993px) {
@@ -129,47 +126,25 @@ a:focus {
   background-color: black;
   display: block;
 }
-.navbar #r-vreme {
-  color: seagreen;
+.navbar .open {
+  color: rgb(46, 139, 87);
+  text-shadow: 0 0 4px rgba(56, 171, 106, 0.527), 0 0 8px rgba(85, 214, 141, 0.362);
+}
+.navbar .closed {
+  color: rgb(139, 46, 46);
+  text-shadow: 0 0 4px rgba(255, 0, 0, 0.527), 0 0 8px rgba(255, 0, 0, 0.362);
+}
+.navbar .r-vreme {
+  margin-left: 10px;
   font-size: 0.9rem;
-  opacity: 0.8;
   font-weight: bold;
-  border: 1px solid;
-  padding: 1px 3px;
 }
 @media (max-width: 768px) {
   .navbar #telephone span {
     display: none !important;
   }
 }
-
-.navbar-nav a {
-  color: black;
-}
-.navbar-nav a.nav-link {
-  font-family: "Play";
-  border-bottom: 2px solid transparent;
-  text-transform: uppercase;
-}
-@media (max-width: 768px) {
-  .navbar-nav a.nav-link {
-    padding: 2px 0;
-    margin: 2px 0;
-  }
-}
-.navbar-nav a.nav-link:hover {
-  color: rgba(0, 0, 0, 0.692);
-  border-bottom: 2px solid rgba(0, 0, 0, 0.5815);
-}
-.navbar-nav a.nav-link.active {
-  border-bottom: 2px solid black;
-}
-@media (max-width: 768px) {
-  .navbar-nav a.nav-link.active {
-    border: 2px solid black;
-  }
-}
-.navbar-nav .my-toggler {
+.navbar .my-toggler {
   background-color: #ffffff;
   border: 0;
   border-radius: 4px;
@@ -189,92 +164,115 @@ a:focus {
   -webkit-user-select: none;
   touch-action: manipulation;
 }
-.navbar-nav .my-toggler:hover {
+.navbar .my-toggler:hover {
   background-color: rgb(249, 250, 251);
 }
-.navbar-nav .my-toggler:focus {
+.navbar .my-toggler:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
 }
-.navbar-nav .my-toggler:focus-visible {
+.navbar .my-toggler:focus-visible {
   box-shadow: none;
+}
+
+.navbar-nav {
+  font-size: smaller;
+  font-family: "Play";
+  padding: 2px 0;
+}
+.navbar-nav a {
+  color: rgba(0, 0, 0, 0.708);
+  padding: 0 !important;
+  margin: 0 6px !important;
+  border-bottom: 2px solid transparent;
+  text-transform: uppercase;
+}
+@media (max-width: 768px) {
+  .navbar-nav a {
+    margin: 6px 0 !important;
+  }
+}
+.navbar-nav a:hover {
+  color: rgb(0, 0, 0);
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+.navbar-nav a.nav-link.active {
+  border-bottom: 2px solid black;
+}
+@media (max-width: 768px) {
+  .navbar-nav a.nav-link.active {
+    border: 2px solid black;
+  }
 }
 
 .navbar-collapse {
   flex-grow: 0;
 }
 
-header {
-  height: 80vh;
-  position: relative;
-}
-header .holder {
+.hero-h {
   height: 80vh;
   width: 100%;
+}
+@media (min-width: 768px) {
+  .hero-h {
+    height: 70vh;
+  }
+}
+@media (max-width: 767px) {
+  .hero-h {
+    height: 65vh;
+  }
+}
+.hero-h .back-h {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 2px;
+  height: 100%;
 }
-header .holder div.d-flex {
-  background-color: rgba(255, 255, 255, 0.62);
+.hero-h .back-h .l {
   background-size: cover !important;
   background-position: center;
+  background-image: url(../img/lap17.jpg);
 }
-header .holder img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 100%;
-  max-height: 40vh;
-}
-header .holder .l {
-  background-image: url(../img/lap18.jpg);
-}
-header .holder .s {
+.hero-h .back-h .s {
+  background-size: cover !important;
+  background-position: center;
   background-image: url(../img/desk5.jpg);
 }
-header .holder .d {
+.hero-h .back-h .d {
+  background-size: cover !important;
+  background-position: center left;
   background-image: url(../img/lap19.jpg);
 }
-header .holder .header-info {
-  display: flex;
+.hero-h .title-h {
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
+  color: white;
 }
-header .holder .header-info span {
-  font-weight: bold;
-  text-shadow: 0px 0px 22px rgba(159, 159, 159, 0.5098039216);
+.hero-h .title-h h1 {
   font-family: "Playb";
-  font-size: 5.2rem;
+  margin-top: 30vh;
+  text-align: center;
+  font-size: 2rem;
+  text-shadow: 0px 0px 22px rgba(159, 159, 159, 0.5098039216);
 }
-@media (max-width: 768px) {
-  header .holder .header-info span {
+.hero-h .title-h h1 span {
+  display: block;
+  font-weight: bold;
+  font-size: 5.2rem;
+  font-family: "Segoe UI";
+}
+@media (max-width: 767px) {
+  .hero-h .title-h h1 span {
     font-size: 2.2rem;
   }
 }
-header .holder .header-info h1 {
-  text-align: center;
-  font-size: 2rem;
-}
-@media (max-width: 768px) {
-  header .holder .header-info h1 {
+@media (max-width: 767px) {
+  .hero-h .title-h h1 {
     font-size: 1.4rem;
-  }
-}
-header .holder .header-info .title-holder {
-  border-radius: 16px;
-  width: -moz-fit-content;
-  width: fit-content;
-  position: relative;
-  color: white;
-  padding: 70px 50px;
-  margin: auto;
-}
-@media (max-width: 768px) {
-  header .holder .header-info .title-holder {
-    padding: 10px 10px;
   }
 }
 
@@ -292,7 +290,7 @@ header .holder .header-info .title-holder {
   margin: auto;
   height: auto;
 }
-@media (max-width: 767px) {
+@media (min-width: 768px) {
   #about img {
     position: absolute;
     top: 30%;
@@ -304,37 +302,51 @@ header .holder .header-info .title-holder {
   position: relative;
   color: white;
   border-radius: 8px;
+  width: 100%;
+  padding: 130px 0;
 }
 @media (max-width: 767px) {
   #about .about-holder {
-    background-image: url(../img/part5.jpg);
-    border-radius: 8px;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
+    padding: 90px 0;
   }
 }
-#about .about-holder .about-right {
+#about .about-holder::after {
   position: absolute;
-  left: 0;
-  top: 11%;
+  content: "";
+  top: 0;
+  left: 10%;
+  width: 80%;
+  height: 100%;
+  background-image: url(../img/part5.jpg);
+  border-radius: 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  z-index: -1;
+}
+@media (max-width: 767px) {
+  #about .about-holder::after {
+    width: 100%;
+    left: 0;
+  }
+}
+#about .about-holder .about-up {
+  position: relative;
   border-radius: 17px 0 0 17px;
   background-color: rgba(0, 0, 0, 0.87);
   background-blend-mode: color;
   border: 13px solid white;
   padding: 35px;
+  margin-bottom: 150px;
 }
 @media (max-width: 767px) {
-  #about .about-holder .about-right {
-    position: relative;
-    border-radius: 8px;
-    background-position: center center;
+  #about .about-holder .about-up {
     border: none;
-    padding: 22px 10px;
+    padding: 10px;
   }
 }
-#about .about-holder .about-left {
-  position: absolute;
+#about .about-holder .about-down {
+  position: relative;
   right: 0;
   bottom: 11%;
   border-radius: 0 17px 17px 0;
@@ -344,130 +356,110 @@ header .holder .header-info .title-holder {
   padding: 35px;
 }
 @media (max-width: 767px) {
-  #about .about-holder .about-left {
+  #about .about-holder .about-down {
     border: none;
-    position: relative;
-    border-radius: 8px;
-    background-position: center center;
-    background-color: rgba(0, 0, 0, 0.45);
-    border-top: none;
-    padding: 22px 10px;
-    margin-top: 150px;
+    padding: 10px;
   }
-}
-#about .img-fix {
-  position: relative;
-  z-index: -1;
-  margin-left: -100px;
 }
 
-#main-serv {
-  margin-top: 10vh;
-  padding-bottom: 50px;
-}
-#main-serv h3 {
-  margin-bottom: 15px;
-  margin-top: 30px;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-weight: bold;
+.main-serv {
+  margin-top: 200px;
 }
 @media (max-width: 767px) {
-  #main-serv h3 {
-    padding-left: 10px;
+  .main-serv {
+    margin-top: 100px;
   }
 }
-#main-serv p {
-  padding: 0 30px;
-  text-align: justify;
-  margin-bottom: 0;
-}
-#main-serv .serv-card {
-  height: 211px;
+.main-serv .serv-card {
+  height: 100%;
   text-align: center;
-  border: 1px solid #bdeafa;
-  padding: 15px 5px 5px 5px;
+  font-family: "Play";
+  align-items: center;
+  justify-content: space-around;
   display: flex;
   flex-direction: column;
+  border-radius: 4px;
   background-size: cover !important;
   background-position: left center;
   background-color: rgba(255, 255, 255, 0.89);
   background-blend-mode: color;
+  box-shadow: rgba(14, 63, 126, 0.06) 0px 0px 0px 1px, rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px, rgba(42, 51, 70, 0.04) 0px 2px 2px -1px, rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px, rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px, rgba(42, 51, 70, 0.03) 0px 10px 10px -5px, rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
 }
-#main-serv .serv-card h3 {
+.main-serv .serv-card h3 {
   margin: auto;
-  font-family: "Play";
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 1.4rem;
 }
-#main-serv .serv-card i {
-  font-size: 2.3rem;
+.main-serv .serv-card i {
+  margin: 20px 0;
+  font-size: 3rem;
 }
-#main-serv .serv-card a {
-  border: 1px solid #49add1;
-  margin: auto;
+.main-serv .serv-card a {
   font-size: 1rem;
-  background: #49add1;
-  margin-bottom: 10px;
+  background-image: linear-gradient(rgba(196, 195, 196, 0.84), rgba(21, 18, 25, 0.84) 100%);
+  box-shadow: rgba(57, 31, 91, 0.24) 0 2px 2px, rgba(179, 132, 201, 0.4) 0 8px 12px;
+  margin: 10px 0;
   padding: 3px 15px;
   color: white;
   border-radius: 15px;
   width: -moz-fit-content;
   width: fit-content;
 }
-#main-serv .serv-card a:hover {
-  background: white;
-  color: black;
+.main-serv .serv-card a:hover {
+  background-image: linear-gradient(rgba(225, 223, 225, 0.84), rgba(47, 41, 54, 0.84) 100%);
 }
-#main-serv .serv-card.desktop-card {
+.main-serv .desktop-card {
   background-image: url(../img/desk6.jpg);
 }
-#main-serv .serv-card.laptop-card {
+.main-serv .laptop-card {
   background-image: url(../img/lap8.jpg);
 }
-#main-serv .serv-card.os-card {
+.main-serv .os-card {
   background-image: url(../img/windows02.jpg);
 }
-#main-serv .serv-card.recover-card {
+.main-serv .recover-card {
   background-image: url(../img/recover.jpg);
 }
-#main-serv .serv-card.remote-card {
+.main-serv .remote-card {
   background-image: url(../img/rukovanje.jpg);
 }
-#main-serv .serv-card.sos-card {
+.main-serv .sos-card {
   background-image: url(../img/intervencije.jpg);
 }
-#main-serv .serv-card.web-card {
+.main-serv .web-card {
   background-image: url(../img/codewomen.jpg);
 }
-#main-serv .serv-card.network-card {
+.main-serv .network-card {
   background-image: url(../img/network2.jpg);
 }
-#main-serv #partner {
+.main-serv #partner {
   font-size: 2rem;
   margin: 100px 0;
   justify-content: center;
 }
 @media (max-width: 767px) {
-  #main-serv #partner {
+  .main-serv #partner {
     font-size: 1rem;
     margin: 50px 0;
   }
 }
-#main-serv #partner a {
+.main-serv #partner a {
   width: -moz-fit-content;
   width: fit-content;
   align-items: center;
   display: flex;
 }
-#main-serv #partner a:hover {
+.main-serv #partner a:hover {
   color: red;
 }
-#main-serv #partner span {
+.main-serv #partner span {
   width: -moz-fit-content;
   width: fit-content;
   align-items: center;
   display: flex;
 }
-#main-serv #partner img {
+.main-serv #partner img {
   margin: 0 10px;
 }
 
@@ -681,30 +673,47 @@ header .holder .header-info .title-holder {
 }
 
 footer {
-  background-image: url(../img/kontakt3.jpg);
+  background-image: url(../img/kontakt2.jpg);
   background-size: cover !important;
   background-position: left center;
-  background-color: rgba(255, 255, 255, 0.87);
+  background-color: rgba(255, 255, 255, 0.85);
   background-blend-mode: color;
   background-attachment: fixed;
-  padding-top: 50px;
+  padding-top: 80px;
 }
 @media (max-width: 767px) {
   footer {
-    padding-top: 5px;
+    padding-top: 50px;
   }
 }
-footer p {
-  display: block;
-  margin: auto;
+@media (max-width: 767px) {
+  footer h2 {
+    margin-bottom: 60px;
+  }
 }
-footer img {
-  color: white;
-  font-size: 13px;
-  display: block;
-  margin: auto;
+footer .con-items {
+  font-family: "Play";
 }
-footer .facelink i {
+footer .con-items h6 {
+  margin-top: 20px;
+  font-size: 1.2rem;
+}
+footer .con-items a,
+footer .con-items p,
+footer .con-items address {
+  font-size: 0.9rem;
+  display: block;
+  margin: 0;
+}
+footer .con-items a:hover,
+footer .con-items a i:hover {
+  color: #275ea3;
+}
+footer .con-items .facelink {
+  display: flex;
+  margin: 10px 0;
+}
+footer .con-items .facelink i {
   margin-right: 10px;
   font-size: 40px;
 }
@@ -712,83 +721,37 @@ footer #prava {
   text-align: center;
   font-size: 12px;
 }
-footer a:hover,
-footer a i:hover {
-  color: #275ea3;
+footer .dev-brend {
+  background-color: white;
+  padding: 10px 0;
+  width: 100%;
+  box-shadow: 0px 0px 21px -3px rgba(0, 0, 0, 0.3411764706);
 }
-
-.info address {
-  margin-bottom: 0 !important;
-  font-size: 13px;
-  margin: 10px 10px 0 0;
-}
-.info h6 {
-  margin: 10px 10px 0 0;
+footer .dev-brend a {
   width: -moz-fit-content;
   width: fit-content;
+  margin: auto;
+  display: block;
 }
-.info #mapa {
+footer .dev-brend img {
+  width: 150px;
+}
+footer #mapa {
+  padding-top: 20px;
   z-index: 0;
   width: 100%;
   border-radius: 6px;
 }
 @media (max-width: 767px) {
-  .info #mapa {
+  footer #mapa {
     width: 100%;
   }
 }
-.info #mapa iframe {
+footer #mapa iframe {
   border-radius: 6px;
   box-sizing: border-box;
   height: 370px;
   width: 100%;
   margin: auto;
   border: none;
-}
-
-@media (max-width: 767px) {
-  .con-card {
-    padding: 8px;
-  }
-}
-
-.con-item {
-  margin-bottom: 15px;
-}
-.con-item h6 {
-  width: -moz-fit-content;
-  width: fit-content;
-  font-size: 1.2rem;
-}
-.con-item a,
-.con-item p,
-.con-item address {
-  font-family: "Play";
-  font-size: 0.9rem;
-  display: block;
-  margin: 0;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-
-@media (max-width: 767px) {
-  .mail a {
-    font-size: 13px;
-  }
-}
-
-.dev-brend {
-  background-color: white;
-  padding: 10px 0;
-  width: 100%;
-  box-shadow: 0px 0px 21px -3px rgba(0, 0, 0, 0.3411764706);
-}
-.dev-brend a {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: auto;
-  display: block;
-}
-.dev-brend img {
-  width: 180px;
 }/*# sourceMappingURL=main.css.map */

@@ -10,7 +10,13 @@ $medium-device: 768px;
     @content;
   }
 }
-$large-device: 1023px;
+$sim-device: 1023px;
+@mixin sim-device {
+  @media (max-width: #{$sim-device}) {
+    @content;
+  }
+}
+$large-device: 1024px;
 @mixin large-device {
   @media (min-width: #{$large-device}) {
     @content;

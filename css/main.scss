@@ -12,7 +12,6 @@ h6 {
 h2 {
     width: fit-content;
     margin: auto;
-    padding: 10px;
     margin-bottom: 100px;
     font-size: 3rem;
     text-transform: uppercase;
@@ -56,13 +55,13 @@ a:focus {
 
 .navbar {
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-    display: none;
-    @media (min-width: 992px) {
-        height: 6vh;
-    }
+    box-shadow: rgba(0, 0, 0, 0.45) 0 5px 9px 0px;
+    // display: none;
+    // @media (min-width: 992px) {
+    //     height: 6vh;
+    // }
     .nav-holder {
-        padding: 0 3px;
+        // padding: 0 3px;
         height: 100%;
     }
     #navbar-servis {
@@ -77,10 +76,15 @@ a:focus {
             text-align: center;
         }
     }
-    .navbar-brand {
-        margin: 0;
-        img {
-            height: 40px;
+    .logo {
+        display: flex;
+        align-items: center;
+        a {
+            padding: 0;
+            margin: 0;
+            img {
+                height: 40px;
+            }
         }
     }
     button {
@@ -95,44 +99,28 @@ a:focus {
             display: block;
         }
     }
-    #r-vreme {
-        color: seagreen;
+    .open {
+        color: rgb(46, 139, 87);
+        text-shadow:
+            0 0 4px rgba(56, 171, 106, 0.527),
+            0 0 8px rgba(85, 214, 141, 0.362);
+    }
+    .closed {
+        color: rgb(139, 46, 46);
+        text-shadow:
+            0 0 4px rgba(255, 0, 0, 0.527),
+            0 0 8px rgba(255, 0, 0, 0.362);
+    }
+    .r-vreme {
+        margin-left: 10px;
         font-size: 0.9rem;
-        opacity: 0.8;
         font-weight: bold;
-        border: 1px solid;
-        padding: 1px 3px;
     }
     #telephone {
         @media (max-width: 768px) {
             span {
                 display: none !important;
             }
-        }
-    }
-}
-
-.navbar-nav {
-    a {
-        color: black;
-    }
-    a.nav-link {
-        font-family: "Play";
-        border-bottom: 2px solid transparent;
-        text-transform: uppercase;
-        @media (max-width: 768px) {
-            padding: 2px 0;
-            margin: 2px 0;
-        }
-        &:hover {
-            color: rgba(0, 0, 0, 0.692);
-            border-bottom: 2px solid rgba(0, 0, 0, 0.5815);
-        }
-    }
-    a.nav-link.active {
-        border-bottom: 2px solid black;
-        @media (max-width: 768px) {
-            border: 2px solid black;
         }
     }
     .my-toggler {
@@ -154,111 +142,124 @@ a:focus {
         user-select: none;
         -webkit-user-select: none;
         touch-action: manipulation;
-    }
+        &:hover {
+            background-color: rgb(249, 250, 251);
+        }
 
-    .my-toggler:hover {
-        background-color: rgb(249, 250, 251);
-    }
+        &:focus {
+            outline: 2px solid transparent;
+            outline-offset: 2px;
+        }
 
-    .my-toggler:focus {
-        outline: 2px solid transparent;
-        outline-offset: 2px;
+        &:focus-visible {
+            box-shadow: none;
+        }
     }
+}
 
-    .my-toggler:focus-visible {
-        box-shadow: none;
+.navbar-nav {
+    font-size: smaller;
+    font-family: "Play";
+    padding: 2px 0;
+    a {
+        color: rgba(0, 0, 0, 0.708);
+        padding: 0 !important;
+        margin: 0 6px !important;
+        border-bottom: 2px solid transparent;
+        text-transform: uppercase;
+        @media (max-width: 768px) {
+            margin: 6px 0 !important;
+        }
+        &:hover {
+            color: rgb(0, 0, 0);
+            border-bottom: 2px solid rgb(0, 0, 0);
+        }
+    }
+    a.nav-link.active {
+        border-bottom: 2px solid black;
+        @media (max-width: 768px) {
+            border: 2px solid black;
+        }
     }
 }
 .navbar-collapse {
     flex-grow: 0;
 }
-header {
+.hero-h {
     height: 80vh;
-    position: relative;
-    .holder {
-        height: 80vh;
-        width: 100%;
+    width: 100%;
+    @include medium-device {
+        height: 70vh;
+    }
+    @include small-device {
+        height: 65vh;
+    }
+    .back-h {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-column-gap: 2px;
-        div.d-flex {
-            background-color: rgba(255, 255, 255, 0.62);
+        height: 100%;
+        .l {
             background-size: cover !important;
             background-position: center;
-        }
-        img {
-            object-fit: cover;
-            width: 100%;
-            max-height: 40vh;
-        }
-        .l {
-            background-image: url(../img/lap18.jpg);
+            background-image: url(../img/lap17.jpg);
         }
         .s {
+            background-size: cover !important;
+            background-position: center;
             background-image: url(../img/desk5.jpg);
         }
         .d {
+            background-size: cover !important;
+            background-position: center left;
             background-image: url(../img/lap19.jpg);
         }
-        .header-info {
-            display: flex;
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            top: 0;
-            left: 0;
+    }
+    .title-h {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        color: white;
+        h1 {
             span {
+                display: block;
                 font-weight: bold;
-                text-shadow: 0px 0px 22px #9f9f9f82;
-                font-family: "Playb";
                 font-size: 5.2rem;
-                @media (max-width: 768px) {
+                font-family: "Segoe UI";
+                @include small-device {
                     font-size: 2.2rem;
                 }
             }
-            h1 {
-                text-align: center;
-                font-size: 2rem;
-                @media (max-width: 768px) {
-                    font-size: 1.4rem;
-                }
-            }
-
-            .title-holder {
-                border-radius: 16px;
-                width: fit-content;
-                position: relative;
-                color: white;
-                padding: 70px 50px;
-                margin: auto;
-                @media (max-width: 768px) {
-                    padding: 10px 10px;
-                }
+            font-family: "Playb";
+            margin-top: 30vh;
+            text-align: center;
+            font-size: 2rem;
+            text-shadow: 0px 0px 22px #9f9f9f82;
+            @include small-device {
+                font-size: 1.4rem;
             }
         }
     }
 }
 
 #about {
-    @media (max-width: 767px) {
+    @include small-device {
         padding: 20px 0;
     }
     p {
         text-align: justify;
     }
     img {
-        // border: 1px solid;
         border-radius: 4px;
         width: 80%;
         margin: auto;
         height: auto;
-        @include small-device {
+        @include medium-device {
             position: absolute;
             top: 30%;
             width: 100%;
-            // .about-img {
-            //     display: none;
-            // }
             display: none;
         }
     }
@@ -266,33 +267,44 @@ header {
         position: relative;
         color: white;
         border-radius: 8px;
+        width: 100%;
+        padding: 130px 0;
         @include small-device {
+            padding: 90px 0;
+        }
+        &::after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 10%;
+            width: 80%;
+            height: 100%;
             background-image: url(../img/part5.jpg);
             border-radius: 8px;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center center;
+            z-index: -1;
+            @include small-device {
+                width: 100%;
+                left: 0;
+            }
         }
-        .about-right {
-            position: absolute;
-            left: 0;
-            top: 11%;
+        .about-up {
+            position: relative;
             border-radius: 17px 0 0 17px;
-            // margin-left: -100px;
             background-color: rgba(0, 0, 0, 0.87);
             background-blend-mode: color;
             border: 13px solid white;
             padding: 35px;
+            margin-bottom: 150px;
             @include small-device {
-                position: relative;
-                border-radius: 8px;
-                background-position: center center;
                 border: none;
-                padding: 22px 10px;
+                padding: 10px;
             }
         }
-        .about-left {
-            position: absolute;
+        .about-down {
+            position: relative;
             right: 0;
             bottom: 11%;
             border-radius: 0 17px 17px 0;
@@ -302,97 +314,94 @@ header {
             padding: 35px;
             @include small-device {
                 border: none;
-                position: relative;
-                border-radius: 8px;
-                background-position: center center;
-                background-color: rgba(0, 0, 0, 0.45);
-                border-top: none;
-                // margin-left: 0px;
-                padding: 22px 10px;
-                margin-top: 150px;
+                padding: 10px;
             }
         }
     }
-
-    .img-fix {
-        position: relative;
-        z-index: -1;
-        margin-left: -100px;
-    }
 }
-#main-serv {
-    margin-top: 10vh;
-    padding-bottom: 50px;
-    h3 {
-        margin-bottom: 15px;
-        margin-top: 30px;
-        width: fit-content;
-        font-weight: bold;
-        @media (max-width: 767px) {
-            padding-left: 10px;
-        }
+.main-serv {
+    margin-top: 200px;
+    @include small-device {
+        margin-top: 100px;
     }
-    p {
-        padding: 0 30px;
-        text-align: justify;
-        margin-bottom: 0;
-    }
+
     .serv-card {
-        height: 211px;
+        height: 100%;
         text-align: center;
-        border: 1px solid #bdeafa;
-        padding: 15px 5px 5px 5px;
+        font-family: "Play";
+        align-items: center;
+        justify-content: space-around;
         display: flex;
         flex-direction: column;
+        border-radius: 4px;
         background-size: cover !important;
         background-position: left center;
         background-color: rgb(255 255 255 / 89%);
         background-blend-mode: color;
+        box-shadow:
+            rgba(14, 63, 126, 0.06) 0px 0px 0px 1px,
+            rgba(42, 51, 70, 0.03) 0px 1px 1px -0.5px,
+            rgba(42, 51, 70, 0.04) 0px 2px 2px -1px,
+            rgba(42, 51, 70, 0.04) 0px 3px 3px -1.5px,
+            rgba(42, 51, 70, 0.03) 0px 5px 5px -2.5px,
+            rgba(42, 51, 70, 0.03) 0px 10px 10px -5px,
+            rgba(42, 51, 70, 0.03) 0px 24px 24px -8px;
         h3 {
             margin: auto;
-            font-family: "Play";
+            width: fit-content;
+            font-size: 1.4rem;
+            @include small-device {
+            }
         }
         i {
-            font-size: 2.3rem;
+            margin: 20px 0;
+            font-size: 3rem;
         }
         a {
-            border: 1px solid#49add1;
-            margin: auto;
             font-size: 1rem;
-            background: #49add1;
-            margin-bottom: 10px;
+            // background: #373838;
+            // background-image: radial-gradient(100% 100% at 100% 0, #b2c4c9 0, #373838 100%);
+            background-image: linear-gradient(rgba(196, 195, 196, 0.84), rgba(21, 18, 25, 0.84) 100%);
+            // box-shadow:
+            //     rgba(45, 35, 66, 0.4) 0 2px 4px,
+            //     rgba(45, 35, 66, 0.3) 0 7px 13px -3px,
+            //     rgba(58, 65, 111, 0.5) 0 -3px 0 inset;
+            box-shadow:
+                rgba(57, 31, 91, 0.24) 0 2px 2px,
+                rgba(179, 132, 201, 0.4) 0 8px 12px;
+            margin: 10px 0;
             padding: 3px 15px;
             color: white;
             border-radius: 15px;
             width: fit-content;
             &:hover {
-                background: white;
-                color: black;
+                background-image: linear-gradient(rgba(225, 223, 225, 0.84), rgba(47, 41, 54, 0.84) 100%);
+                // color: black;
             }
         }
     }
-    .serv-card.desktop-card {
+    .desktop-card {
         background-image: url(../img/desk6.jpg);
     }
-    .serv-card.laptop-card {
+    .laptop-card {
         background-image: url(../img/lap8.jpg);
     }
-    .serv-card.os-card {
+    .os-card {
         background-image: url(../img/windows02.jpg);
     }
-    .serv-card.recover-card {
+    .recover-card {
         background-image: url(../img/recover.jpg);
     }
-    .serv-card.remote-card {
+    .remote-card {
         background-image: url(../img/rukovanje.jpg);
     }
-    .serv-card.sos-card {
+    .sos-card {
         background-image: url(../img/intervencije.jpg);
     }
-    .serv-card.web-card {
+    .web-card {
         background-image: url(../img/codewomen.jpg);
     }
-    .serv-card.network-card {
+    .network-card {
         background-image: url(../img/network2.jpg);
     }
     #partner {
@@ -424,11 +433,11 @@ header {
 #services {
     margin-top: 10vh;
     padding-bottom: 50px;
-    @media (max-width: 767px) {
+    @include small-device {
         padding: 5px;
     }
     .container {
-        @media (max-width: 767px) {
+        @include small-device {
             padding: 0;
         }
     }
@@ -443,7 +452,7 @@ header {
         span {
             display: none;
         }
-        @media (max-width: 767px) {
+        @include small-device {
             font-size: 1.7rem;
         }
     }
@@ -453,7 +462,7 @@ header {
         width: fit-content;
         // font-family: "Grupo";
         font-weight: bold;
-        @media (max-width: 767px) {
+        @include small-device {
             padding-left: 10px;
         }
     }
@@ -494,7 +503,7 @@ header {
         box-shadow: rgb(0 0 0 / 45%) 0px 25px 20px -20px;
     }
     .laptop-row {
-        @media (max-width: 767px) {
+        @include small-device {
             background-image: url(../img/desk8.jpg);
             background-size: cover;
             background-position: right;
@@ -504,7 +513,7 @@ header {
         }
     }
     .recowery-row {
-        @media (max-width: 767px) {
+        @include small-device {
             background-image: url(../img/lap20.jpg);
             background-size: cover;
             background-position: right;
@@ -614,51 +623,70 @@ header {
 }
 
 footer {
-    background-image: url(../img/kontakt3.jpg);
+    background-image: url(../img/kontakt2.jpg);
     background-size: cover !important;
     background-position: left center;
-    background-color: rgba(255, 255, 255, 0.87);
+    background-color: rgba(255, 255, 255, 0.85);
     background-blend-mode: color;
     background-attachment: fixed;
-    padding-top: 50px;
+    padding-top: 80px;
     @include small-device {
-        padding-top: 5px;
+        padding-top: 50px;
     }
-    p {
-        display: block;
-        margin: auto;
+    h2 {
+        @include small-device {
+            margin-bottom: 60px;
+        }
     }
-    img {
-        color: white;
-        font-size: 13px;
-        display: block;
-        margin: auto;
+    .con-items {
+        font-family: "Play";
+        h6 {
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+        a,
+        p,
+        address {
+            font-size: 0.9rem;
+            display: block;
+            margin: 0;
+        }
+        a:hover,
+        a i:hover {
+            color: $plava;
+        }
+        .facelink {
+            display: flex;
+            margin: 10px 0;
+            i {
+                margin-right: 10px;
+                font-size: 40px;
+            }
+        }
     }
-    .facelink i {
-        margin-right: 10px;
-        font-size: 40px;
-    }
+
     #prava {
         text-align: center;
         font-size: 12px;
     }
-    a:hover,
-    a i:hover {
-        color: $plava;
-    }
-}
 
-.info {
-    address {
-        margin-bottom: 0 !important;
-        font-size: 13px;
-        margin: 10px 10px 0 0;
+    .dev-brend {
+        background-color: white;
+        padding: 10px 0;
+        width: 100%;
+        a {
+            width: fit-content;
+            margin: auto;
+            display: block;
+        }
+        box-shadow: 0px 0px 21px -3px #00000057;
+        img {
+            width: 150px;
+        }
     }
-    h6 {
-        margin: 10px 10px 0 0;
-        width: fit-content;
-    }
+
     #mapa {
+        padding-top: 20px;
         z-index: 0;
         width: 100%;
         border-radius: 6px;
@@ -673,49 +701,5 @@ footer {
             margin: auto;
             border: none;
         }
-    }
-}
-.con-card {
-    // padding: 20px;
-    // background: white;
-    // border: 1px solid;
-    // border-bottom: none;
-    @include small-device {
-        padding: 8px;
-    }
-}
-.con-item {
-    margin-bottom: 15px;
-    h6 {
-        width: fit-content;
-        font-size: 1.2rem;
-    }
-    a,
-    p,
-    address {
-        font-family: "Play";
-        font-size: 0.9rem;
-        display: block;
-        margin: 0;
-        width: fit-content;
-    }
-}
-.mail a {
-    @include small-device {
-        font-size: 13px;
-    }
-}
-.dev-brend {
-    background-color: white;
-    padding: 10px 0;
-    width: 100%;
-    a {
-        width: fit-content;
-        margin: auto;
-        display: block;
-    }
-    box-shadow: 0px 0px 21px -3px #00000057;
-    img {
-        width: 180px;
     }
 }

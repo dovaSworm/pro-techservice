@@ -1,4 +1,4 @@
-$(function() {
+$(function () {
     var ww = $(window).width();
     var wh = $(window).height();
     var navbar = $(".navbar");
@@ -8,19 +8,22 @@ $(function() {
     var day = date.getDay();
     $(".radnovreme").html('Radnim danom 10h - 19h<br>Subotom 10-15h');
     if ((hours >= 10 && hours <= 19 && day <= 5 && day > 0) || (day == 6 && hours >= 10 && hours <= 15)) {
-        $("#r-vreme").html('otvoreno');
+        $(".r-vreme").html('otvoreno');
+        $(".r-vreme").removeClass('closed')
+        $(".r-vreme").addClass('open')
     } else {
-        $("#r-vreme").html('zatvoreno');
-        $("#r-vreme").css('color', 'red');
+        $(".r-vreme").html('zatvoreno');
+        $(".r-vreme").addClass('closed');
+        $(".r-vreme").removeClass('open');
     }
-    
+
     document.getElementById('prava').innerHTML = "<small>Copyright &copy; RDdesign " + year + ". All Rights Reserved</small>";
 
     var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
     var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
-      return new bootstrap.Tooltip(tooltipTriggerEl)
+        return new bootstrap.Tooltip(tooltipTriggerEl)
     })
-    
+
     $(".title-holder").addClass("anima-hero2");
     $(".dropdown-menu").addClass("nav-anima");
 
@@ -45,8 +48,4 @@ $(function() {
     if (document.title === "Cenovnik, Servis računara Voždovac, Autokomanda, Beograd") {
         $(".nav-link:nth-of-type(4)").addClass('active');
     }
-    
-    // $('.xxx.carousel').carousel({
-    //     interval: 2000
-    // });
 });
