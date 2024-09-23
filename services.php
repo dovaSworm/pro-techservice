@@ -1,6 +1,6 @@
 <?php
 $title = "Usluge, Servis računara Voždovac, Autokomanda, Beograd";
-include 'navbar.php';
+include 'header.php';
 ?>
 <section id="services">
     <h1 class="">Usluge<span>servisa DESKTOP i LAPTOP računara</h1>

@@ -49,6 +49,11 @@ h2 {
 h3 {
   margin-bottom: 30px;
 }
+@media (max-width: 767px) {
+  h3 {
+    margin-bottom: 15px;
+  }
+}
 
 hr {
   opacity: 1;
@@ -67,19 +72,16 @@ body {
     font-size: 16px;
   }
 }
-
-* {
+body * {
   box-sizing: border-box;
 }
-
-a,
-a:hover {
+body a,
+body a:hover {
   color: inherit;
   text-decoration: none;
   cursor: pointer;
 }
-
-a:focus {
+body a:focus {
   -webkit-tap-highlight-color: transparent !important;
   outline: none !important;
 }
@@ -88,15 +90,49 @@ a:focus {
   background-color: white;
   box-shadow: rgba(0, 0, 0, 0.45) 0 5px 9px 0px;
 }
+.navbar .navbar-nav {
+  font-size: smaller;
+  font-family: "Play";
+  padding: 2px 0;
+}
+.navbar .navbar-nav a {
+  color: rgba(0, 0, 0, 0.708);
+  padding: 0 !important;
+  margin: 0 6px !important;
+  border-bottom: 2px solid transparent;
+  border-top: 2px solid transparent;
+  text-transform: uppercase;
+}
+@media (max-width: 767px) {
+  .navbar .navbar-nav a {
+    margin: 6px 0 !important;
+  }
+}
+.navbar .navbar-nav a:hover {
+  color: rgb(0, 0, 0);
+  border-bottom: 2px solid rgb(0, 0, 0);
+}
+.navbar .navbar-nav a.nav-link.active {
+  border-bottom: 2px solid black;
+}
+@media (max-width: 767px) {
+  .navbar .navbar-nav a.nav-link.active {
+    border: 2px solid black;
+  }
+}
+.navbar .navbar-collapse {
+  flex-grow: 0;
+}
 .navbar .nav-holder {
+  padding: 0;
   height: 100%;
 }
 @media (max-width: 992px) {
   .navbar #navbar-servis {
-    top: 7vh;
+    z-index: -1;
     position: absolute;
-    top: 6vh;
-    padding: 5px 20px;
+    top: 0;
+    padding: 50px 20px 20px;
     background-color: white;
     width: 50%;
     right: 0;
@@ -112,7 +148,12 @@ a:focus {
   margin: 0;
 }
 .navbar .logo a img {
-  height: 40px;
+  height: 51px;
+}
+@media (max-width: 767px) {
+  .navbar .logo a img {
+    height: 41px;
+  }
 }
 @media (min-width: 993px) {
   .navbar button {
@@ -139,7 +180,7 @@ a:focus {
   font-size: 0.9rem;
   font-weight: bold;
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navbar #telephone span {
     display: none !important;
   }
@@ -147,9 +188,10 @@ a:focus {
 .navbar .my-toggler {
   background-color: #ffffff;
   border: 0;
+  margin: 4px 6px 4px 0;
   border-radius: 4px;
   box-sizing: border-box;
-  padding: 6px 11px;
+  padding: 4px 10px;
   font-size: 0.875rem;
   font-weight: 600;
   line-height: 1.25rem;
@@ -173,40 +215,6 @@ a:focus {
 }
 .navbar .my-toggler:focus-visible {
   box-shadow: none;
-}
-
-.navbar-nav {
-  font-size: smaller;
-  font-family: "Play";
-  padding: 2px 0;
-}
-.navbar-nav a {
-  color: rgba(0, 0, 0, 0.708);
-  padding: 0 !important;
-  margin: 0 6px !important;
-  border-bottom: 2px solid transparent;
-  text-transform: uppercase;
-}
-@media (max-width: 768px) {
-  .navbar-nav a {
-    margin: 6px 0 !important;
-  }
-}
-.navbar-nav a:hover {
-  color: rgb(0, 0, 0);
-  border-bottom: 2px solid rgb(0, 0, 0);
-}
-.navbar-nav a.nav-link.active {
-  border-bottom: 2px solid black;
-}
-@media (max-width: 768px) {
-  .navbar-nav a.nav-link.active {
-    border: 2px solid black;
-  }
-}
-
-.navbar-collapse {
-  flex-grow: 0;
 }
 
 .hero-h {
@@ -246,11 +254,22 @@ a:focus {
 }
 .hero-h .title-h {
   position: absolute;
-  height: 100%;
   width: 100%;
   top: 0;
   left: 0;
   color: white;
+  height: 80vh;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .hero-h .title-h {
+    height: 70vh;
+  }
+}
+@media (max-width: 767px) {
+  .hero-h .title-h {
+    height: 65vh;
+  }
 }
 .hero-h .title-h h1 {
   font-family: "Playb";
@@ -372,6 +391,7 @@ a:focus {
 }
 .main-serv .serv-card {
   height: 100%;
+  min-height: 200px;
   text-align: center;
   font-family: "Play";
   align-items: center;
@@ -390,6 +410,7 @@ a:focus {
   width: -moz-fit-content;
   width: fit-content;
   font-size: 1.4rem;
+  padding: 0 20px;
 }
 .main-serv .serv-card i {
   margin: 20px 0;
@@ -414,24 +435,6 @@ a:focus {
 }
 .main-serv .laptop-card {
   background-image: url(../img/lap8.jpg);
-}
-.main-serv .os-card {
-  background-image: url(../img/windows02.jpg);
-}
-.main-serv .recover-card {
-  background-image: url(../img/recover.jpg);
-}
-.main-serv .remote-card {
-  background-image: url(../img/rukovanje.jpg);
-}
-.main-serv .sos-card {
-  background-image: url(../img/intervencije.jpg);
-}
-.main-serv .web-card {
-  background-image: url(../img/codewomen.jpg);
-}
-.main-serv .network-card {
-  background-image: url(../img/network2.jpg);
 }
 .main-serv #partner {
   font-size: 2rem;
@@ -463,118 +466,136 @@ a:focus {
   margin: 0 10px;
 }
 
+.recovery {
+  background-image: url(../img/lap20.jpg);
+}
+
+.remote {
+  background-image: url(../img/rukovanje.jpg);
+}
+
+.inst-os {
+  background-image: url(../img/windows02.jpg);
+}
+
+.opti-os {
+  background-image: url(../img/optimizacija.jpg);
+}
+
+.sos {
+  background-image: url(../img/intervencije.jpg);
+}
+
+.web {
+  background-image: url(../img/codewomen.jpg);
+}
+
+.virus {
+  background-image: url(../img/virusnovi.jpg);
+}
+
+.network {
+  background-image: url(../img/network2.jpg);
+}
+
 #services {
-  margin-top: 10vh;
-  padding-bottom: 50px;
+  margin-top: 200px;
 }
 @media (max-width: 767px) {
   #services {
-    padding: 5px;
-  }
-}
-@media (max-width: 767px) {
-  #services .container {
-    padding: 0;
-  }
-}
-#services h1 {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: auto;
-  padding: 10px;
-  margin-bottom: 60px;
-  font-size: 3rem;
-  text-transform: uppercase;
-}
-#services h1 span {
-  display: none;
-}
-@media (max-width: 767px) {
-  #services h1 {
-    font-size: 1.7rem;
-  }
-}
-#services h3 {
-  margin-bottom: 15px;
-  margin-top: 30px;
-  width: -moz-fit-content;
-  width: fit-content;
-  font-weight: bold;
-}
-@media (max-width: 767px) {
-  #services h3 {
-    padding-left: 10px;
+    margin-top: 100px;
   }
 }
 #services p {
-  padding: 0 30px;
   text-align: justify;
   margin-bottom: 0;
 }
-#services img {
+#services .serv-lists {
+  color: white;
+  position: relative;
+  width: 100%;
+  padding: 90px 0;
+}
+@media (max-width: 767px) {
+  #services .serv-lists {
+    padding: 60px 0;
+  }
+}
+#services .serv-lists::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  width: 80%;
+  height: 100%;
+  background-image: url(../img/desk2.jpg);
+  border-radius: 8px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  z-index: 0;
+}
+@media (max-width: 767px) {
+  #services .serv-lists::after {
+    width: 100%;
+  }
+}
+#services .serv-lists .lists-h {
+  z-index: 1;
+  margin: 50px 0;
+  padding: 50px;
+  border-radius: 17px 0 0 17px;
+  background-color: rgba(38, 43, 49, 0.8);
+  border: 13px solid white;
+}
+@media (max-width: 767px) {
+  #services .serv-lists .lists-h {
+    border: none;
+    background-color: rgba(30, 41, 44, 0.5);
+    border-radius: 0;
+    padding: 10px;
+  }
+}
+#services .serv-lists .lists-h ul {
+  list-style: none;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+#services .serv-lists .lists-h ul li {
+  padding: 5px 0;
+}
+#services .serv-lists .lists-h ul i {
+  text-align: center;
+  line-height: 1;
+  min-width: 35px;
+}
+#services .serv-lists img {
   width: -webkit-fill-available;
   -o-object-fit: contain;
      object-fit: contain;
 }
-#services ul {
-  list-style: none;
-  width: -moz-fit-content;
-  width: fit-content;
-  margin-bottom: 0.3rem;
+#services .services-h {
+  margin-top: 100px;
 }
-#services ul li {
-  padding: 2px 0;
-}
-#services .laptop {
-  background-image: url(../img/desk8.jpg);
+#services .services-h div.row {
+  background-color: rgba(0, 0, 0, 0.314);
   background-size: cover;
   background-position: right;
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  background-blend-mode: color;
 }
-#services .recovery {
-  background-image: url(../img/lap20.jpg);
-  background-size: cover;
-  background-position: right;
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-}
-#services .remote {
-  background-image: url(../img/desk9.jpg);
-  background-size: cover;
-  background-position: right;
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+#services .services-h .service-txt {
+  background: rgba(1, 1, 1, 0.87);
+  padding: 30px 50px;
+  color: white;
 }
 @media (max-width: 767px) {
-  #services .laptop-row {
-    background-image: url(../img/desk8.jpg);
-    background-size: cover;
-    background-position: right;
-    background-color: rgba(255, 255, 255, 0.86);
-    background-blend-mode: color;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-  }
-}
-@media (max-width: 767px) {
-  #services .recowery-row {
-    background-image: url(../img/lap20.jpg);
-    background-size: cover;
-    background-position: right;
-    background-color: rgba(255, 255, 255, 0.86);
-    background-blend-mode: color;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-  }
-}
-@media (max-width: 767px) {
-  #services .remote-row {
-    background-image: url(../img/desk6.jpg);
-    background-size: cover;
-    background-position: right;
-    background-color: rgba(255, 255, 255, 0.86);
-    background-blend-mode: color;
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+  #services .services-h .service-txt {
+    background: rgba(1, 1, 1, 0.5);
+    padding: 10px 20px;
   }
 }
 
-.table-h {
+#prices .table-h {
   padding: 0;
   padding-top: 200px;
   padding-bottom: 100px;
@@ -582,101 +603,66 @@ a:focus {
   margin: auto;
 }
 @media (min-width: 768px) {
-  .table-h {
+  #prices .table-h {
     width: 80%;
   }
 }
 @media (max-width: 767px) {
-  .table-h {
+  #prices .table-h {
     padding-top: 100px;
     padding-bottom: 100px;
   }
 }
-.table-h .table-responsive {
+#prices .table-h .table-responsive {
   font-family: "Play";
 }
-.table-h .table-responsive table {
+#prices .table-h .table-responsive table {
   padding: 0 15px;
 }
-.table-h .table-responsive table caption {
+#prices .table-h .table-responsive table caption {
   text-align: center;
   background-color: #212529;
   color: white;
   font-size: 1.4rem;
 }
-.table-h .table-responsive table thead {
+#prices .table-h .table-responsive table thead {
   color: gray;
   font-style: italic;
 }
-.table-h .table-responsive table td {
+#prices .table-h .table-responsive table td {
   height: 110%;
 }
-.table-h .table-responsive table td:first-child,
-.table-h .table-responsive table th:first-child {
+#prices .table-h .table-responsive table td:first-child,
+#prices .table-h .table-responsive table th:first-child {
   padding-left: 25px;
 }
 @media (max-width: 767px) {
-  .table-h .table-responsive table td:first-child,
-  .table-h .table-responsive table th:first-child {
+  #prices .table-h .table-responsive table td:first-child,
+  #prices .table-h .table-responsive table th:first-child {
     padding-left: 15px;
   }
 }
-.table-h .table-responsive table td:last-child,
-.table-h .table-responsive table th:last-child {
+#prices .table-h .table-responsive table td:last-child,
+#prices .table-h .table-responsive table th:last-child {
   text-align: right;
   padding-right: 25px;
 }
 @media (max-width: 767px) {
-  .table-h .table-responsive table td:last-child,
-  .table-h .table-responsive table th:last-child {
+  #prices .table-h .table-responsive table td:last-child,
+  #prices .table-h .table-responsive table th:last-child {
     padding-right: 15px;
   }
 }
-.table-h .table-responsive table tbody tr:hover {
+#prices .table-h .table-responsive table tbody tr:hover {
   opacity: 1;
   background: #e2e2e2 !important;
-}
-
-#main-cen h2 {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: auto;
-  padding: 10px;
-  margin-bottom: 60px;
-  font-size: 3rem;
-  text-transform: uppercase;
-}
-#main-cen h2 span {
-  display: none;
-}
-
-#cenovnik {
-  padding-top: 200px;
-  background-image: url(../img/desk9.jpg);
-  background-size: cover;
-  background-position: right;
-  background-attachment: fixed;
-  background-color: rgba(0, 0, 0, 0.64);
-  background-blend-mode: color;
-}
-#cenovnik h1 {
-  width: -moz-fit-content;
-  width: fit-content;
-  margin: auto;
-  padding: 10px;
-  margin-bottom: 60px;
-  font-size: 3rem;
-  text-transform: uppercase;
-}
-#cenovnik h1 span {
-  display: none;
 }
 
 footer {
   background-image: url(../img/kontakt2.jpg);
   background-size: cover !important;
   background-position: left center;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(255, 255, 255, 0.92);
   background-blend-mode: color;
   background-attachment: fixed;
   padding-top: 80px;
@@ -720,6 +706,7 @@ footer .con-items .facelink i {
 footer #prava {
   text-align: center;
   font-size: 12px;
+  margin-bottom: 0;
 }
 footer .dev-brend {
   background-color: white;
