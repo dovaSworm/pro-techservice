@@ -1,7 +1,7 @@
 <section id="prices">
     <div class="container table-h">
         <div class="table-responsive">
-            <h2 class="text-center">CENOVNIK<span>servisa DESKTOP i LAPTOP računara</span></h2>
+            <h2 class="text-center">CENOVNIK</h2>
             <table class="table table-hover caption-top">
                 <caption>Cene servisa DESKTOP i LAPTOP računara</caption>
                 <thead>
