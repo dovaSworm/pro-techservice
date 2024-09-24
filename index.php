@@ -11,14 +11,14 @@ include 'header.php';
                     <i class="fas fa-laptop d-block"></i>
                     <h3>Laptop servis</h3>
                     <!-- <a href="services.php#dilserv">Pročitaj više</a> -->
-                    <a href="services.html#dilserv">Pročitaj više</a>
+                    <a href="services.html#laptop">Pročitaj više</a>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-3 p-2">
                 <div class="serv-card desktop-card">
                     <i class="fas fa-desktop d-block"></i>
                     <h3>Desktop servis</h3>
-                    <a href="services.php#dilserv">Pročitaj više</a>
+                    <a href="services.php#desktop">Pročitaj više</a>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-3 p-2">
@@ -75,10 +75,6 @@ include 'header.php';
     <div class="container">
         <h2>Zašto izabrati nas?</h2>
         <div class="about-holder">
-            <!-- <div class="col-sm-12 col-md-9 m-auto "> -->
-            <!-- <img class="about-img" src="img/desk6.jpg" alt="protechnology-servis"> -->
-            <!-- <img class="about-img" src="img/part5.jpg" alt="protechnology-servis"> -->
-            <!-- </div> -->
             <div class="col-sm-12 col-md-9 about-up">
                 <h3 class="section-heading">Stručnost, kvalitet, efikasnost i ljubaznost</h3>
                 <p class="">Ovo je moto kojim se Pro techonology team rukovodi u nastupu prema klijentima koji dolaze u
@@ -91,7 +87,7 @@ include 'header.php';
                     Zadovoljan klijent je najbolja potvrda našeg uloženog truda i najbolja preporuka za buduće korisnike
                     naših usluga.</p>
             </div>
-            <div class="col-sm-12 col-md-9 offset-md-3 about-down">
+            <div class="col-sm-12 col-md-9 about-down">
                 <h3 class="section-heading">Pro-technology servis nudi usluge fizičkim i pravinim licima</h3>
                 <p class="">Naš servis u saradnji sa partnerima nudi kompanijama mogućnost dogovora oko postavljanja i
                     održavanja servera i mreže. Instaliranje legalnih sistema, umrežavanje računara i pravljenje baze

@@ -1,12 +1,4 @@
 @font-face {
-  font-family: "Raleway";
-  src: url(../fonts/Raleway-Regular.ttf) format("truetype");
-}
-@font-face {
-  font-family: "RalewayDot";
-  src: url(../fonts/RalewayDots-Regular.ttf) format("truetype");
-}
-@font-face {
   font-family: "Play";
   src: url(../fonts/Play-Regular.ttf) format("truetype");
 }
@@ -331,7 +323,7 @@ body a:focus {
   position: absolute;
   content: "";
   top: 0;
-  left: 10%;
+  right: 0%;
   width: 80%;
   height: 100%;
   background-image: url(../img/part5.jpg);
@@ -349,10 +341,10 @@ body a:focus {
 }
 #about .about-holder .about-up {
   position: relative;
-  border-radius: 17px 0 0 17px;
+  border-radius: 6px 0 0 6px;
   background-color: rgba(0, 0, 0, 0.87);
   background-blend-mode: color;
-  border: 13px solid white;
+  box-shadow: 13px 13px white, 13px -13px white;
   padding: 35px;
   margin-bottom: 150px;
 }
@@ -364,12 +356,10 @@ body a:focus {
 }
 #about .about-holder .about-down {
   position: relative;
-  right: 0;
-  bottom: 11%;
-  border-radius: 0 17px 17px 0;
+  border-radius: 6px 0 0 6px;
   background-color: rgba(0, 0, 0, 0.87);
   background-blend-mode: color;
-  border: 13px solid white;
+  box-shadow: 13px 13px white, 13px -13px white;
   padding: 35px;
 }
 @media (max-width: 767px) {
@@ -542,9 +532,9 @@ body a:focus {
   z-index: 1;
   margin: 50px 0;
   padding: 50px;
-  border-radius: 17px 0 0 17px;
+  border-radius: 6px 0 0 6px;
   background-color: rgba(38, 43, 49, 0.8);
-  border: 13px solid white;
+  box-shadow: 13px 13px white, 13px -13px white;
 }
 @media (max-width: 767px) {
   #services .serv-lists .lists-h {
@@ -573,7 +563,13 @@ body a:focus {
      object-fit: contain;
 }
 #services .services-h {
-  margin-top: 100px;
+  margin-top: 200px;
+  position: relative;
+}
+@media (max-width: 767px) {
+  #services .services-h {
+    margin-top: 100px;
+  }
 }
 #services .services-h div.row {
   background-color: rgba(0, 0, 0, 0.314);
@@ -581,9 +577,21 @@ body a:focus {
   background-position: right;
   background-blend-mode: color;
 }
+#services .services-h div.row:first-child {
+  border-radius: 6px 6px 0 0;
+}
+#services .services-h div.row:first-child .service-txt {
+  border-radius: 0 6px 0 0;
+}
+#services .services-h div.row:last-child {
+  border-radius: 0 0 6px 6px;
+}
+#services .services-h div.row:last-child .service-txt {
+  border-radius: 0 0 0 6px;
+}
 #services .services-h .service-txt {
   background: rgba(1, 1, 1, 0.87);
-  padding: 30px 50px;
+  padding: 50px;
   color: white;
 }
 @media (max-width: 767px) {

@@ -16,13 +16,13 @@
     <link rel="canonical" href="http://protech-servis.rs/" />
     <link rel="icon" type="image/png" href="img/ptm.jpg" />
     <link rel="apple-touch-icon" href="img/ptm.jpg" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
-        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    <link href="./fontawesome-free-6.5.1-web/css/fontawesome.css" rel="stylesheet" />
+    <link href="./fontawesome-free-6.5.1-web/css/brands.css" rel="stylesheet" />
+    <link href="./fontawesome-free-6.5.1-web/css/solid.css" rel="stylesheet" />
+    <link href="./css/main.css" rel="stylesheet">
 
 </head>
-<!-- Header -->
 
 <body>
     <nav class="navbar navbar-expand-lg fixed-top p-0">
@@ -33,7 +33,7 @@
                 </a>
                 <div class="r-vreme">zatvoreno</div>
             </div>
-            <a id="telephone" href="tel:067/7811-242"><i class="fa fa-mobile fa-lg"></i><span
+            <a id="telephone" href="tel:067/7811-242"><i class="fa-solid fa-mobile-screen"></i><span
                     class="ms-md-1">067/7811-242</span></a>
             <button class="my-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-servis"
                 aria-controls="navbar-servis" aria-expanded="false" aria-label="Toggle navigation">

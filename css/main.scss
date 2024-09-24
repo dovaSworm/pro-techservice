@@ -290,7 +290,7 @@ body {
             position: absolute;
             content: "";
             top: 0;
-            left: 10%;
+            right: 0%;
             width: 80%;
             height: 100%;
             background-image: url(../img/part5.jpg);
@@ -306,10 +306,12 @@ body {
         }
         .about-up {
             position: relative;
-            border-radius: 17px 0 0 17px;
+            border-radius: 6px 0 0 6px;
             background-color: rgba(0, 0, 0, 0.87);
             background-blend-mode: color;
-            border: 13px solid white;
+            box-shadow:
+                13px 13px white,
+                13px -13px white;
             padding: 35px;
             margin-bottom: 150px;
             @include small-device {
@@ -319,12 +321,12 @@ body {
         }
         .about-down {
             position: relative;
-            right: 0;
-            bottom: 11%;
-            border-radius: 0 17px 17px 0;
+            border-radius: 6px 0 0 6px;
             background-color: rgba(0, 0, 0, 0.87);
             background-blend-mode: color;
-            border: 13px solid white;
+            box-shadow:
+                13px 13px white,
+                13px -13px white;
             padding: 35px;
             @include small-device {
                 border: none;
@@ -491,9 +493,12 @@ body {
             z-index: 1;
             margin: 50px 0;
             padding: 50px;
-            border-radius: 17px 0 0 17px;
+            border-radius: 6px 0 0 6px;
             background-color: rgba(38, 43, 49, 0.8);
-            border: 13px solid white;
+            box-shadow:
+                13px 13px white,
+                13px -13px white;
+            // border: 13px solid white;
             @include small-device {
                 border: none;
                 background-color: rgba(30, 41, 44, 0.5);
@@ -520,16 +525,32 @@ body {
         }
     }
     .services-h {
-        margin-top: 100px;
+        margin-top: 200px;
+        position: relative;
+        @include small-device {
+            margin-top: 100px;
+        }
         div.row {
             background-color: rgba(0, 0, 0, 0.314);
             background-size: cover;
             background-position: right;
             background-blend-mode: color;
+            &:first-child {
+                border-radius: 6px 6px 0 0;
+                .service-txt {
+                    border-radius: 0 6px 0 0;
+                }
+            }
+            &:last-child {
+                border-radius: 0 0 6px 6px;
+                .service-txt {
+                    border-radius: 0 0 0 6px;
+                }
+            }
         }
         .service-txt {
             background: rgba(1, 1, 1, 0.87);
-            padding: 30px 50px;
+            padding: 50px;
             color: white;
             @include small-device {
                 background: rgba(1, 1, 1, 0.5);

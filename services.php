@@ -4,8 +4,8 @@ include 'header.php';
 ?>
 <section id="services">
     <h2 class="">Usluge</h2>
-    <a id="laptop"></a>
-    <div class="container"><a id="dilserv"></a>
+    <a id="desktop"></a>
+    <div class="container">
         <div class="row g-0 serv-lists">
             <div class="col-12 col-md-9 lists-h">
                 <h3>Desktop računar</h3>
@@ -69,6 +69,7 @@ include 'header.php';
                 </p>
             </div>
         </div>
+        <a id="laptop"></a>
         <a id="recovery"></a>
         <div class="services-h">
             <div class="row g-0 recovery"><a id="recovery"></a>

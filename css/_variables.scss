@@ -22,14 +22,6 @@ $large-device: 1024px;
     @content;
   }
 }
-@font-face {
-  font-family: "Raleway";
-  src: url(../fonts/Raleway-Regular.ttf) format("truetype");
-}
-@font-face {
-  font-family: "RalewayDot";
-  src: url(../fonts/RalewayDots-Regular.ttf) format("truetype");
-}
 $crna: rgba(11, 12, 16, 1);
 $crvena: #ff0047;
 $svetlosiva: rgba(197, 198, 200, 1);
