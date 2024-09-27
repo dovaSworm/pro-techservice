@@ -29,7 +29,7 @@
         <div class="container nav-holder">
             <div class="logo">
                 <a href="index.php">
-                    <img src="img/logo2.jpg" alt="">
+                    <img src="img/logob.png" alt="">
                 </a>
                 <div class="r-vreme">zatvoreno</div>
             </div>
